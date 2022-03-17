@@ -13,7 +13,7 @@ const Dashboard = () => {
       }}
     >
       <Sidebar />
-      <div style={{ width: "80%", height: "100vh", background: "blue" }}>
+      <div style={{ width: "80%", height: "100vh" }}>
         <Outlet />
       </div>
     </div>
