@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../shared/components/Sidebar";
 import { Outlet } from "react-router-dom";
 
 const Dashboard = () => {

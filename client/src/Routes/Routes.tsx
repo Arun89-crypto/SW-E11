@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router-dom";
-import Feed from "../components/Feed";
-import Network from "../components/Network";
+import Feed from "../shared/components/Feed";
+import Network from "../shared/components/Network";
 import Dashboard from "../pages/dashboard";
 
 const AppRoutes = () => {
