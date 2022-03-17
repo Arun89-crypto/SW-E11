@@ -101,7 +101,7 @@ export const Signup = () => {
 						</Container>
 					</Box>
 				</Grid>
-				<Grid item xs={6} sx={{ position: "relative" }}>
+                <Grid item xs={0} md={6} sx={{ position: "relative" }}>
 					<Paper style={styles.paperContainer}>
 						<Box sx={{ width: "60%", height: "max-content" }}>
 							<Typography
