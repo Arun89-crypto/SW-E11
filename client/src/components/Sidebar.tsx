@@ -54,126 +54,166 @@ const Sidebar = () => {
             </Typography>
           </Button>
         </Link>
-        <Button
-          sx={{
-            display: "flex",
-            p: 2,
-            my: 1,
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "flex-start",
+        <Link
+          to="/dashboard/network"
+          style={{
+            textDecoration: "none",
+            color: "#000",
           }}
         >
-          <PeopleRounded />
-          <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
-            Network
-          </Typography>
-        </Button>
-        <Button
-          sx={{
-            display: "flex",
-            p: 2,
-            my: 1,
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "flex-start",
+          <Button
+            sx={{
+              display: "flex",
+              p: 2,
+              my: 1,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <PeopleRounded />
+            <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
+              Network
+            </Typography>
+          </Button>
+        </Link>
+        <Link
+          to="/dashboard/activity"
+          style={{
+            textDecoration: "none",
+            color: "#000",
           }}
         >
-          <BarChartRounded />
-          <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
-            My Activity
-          </Typography>
-        </Button>
-        <Button
-          sx={{
-            display: "flex",
-            p: 2,
-            my: 1,
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "flex-start",
-          }}
+          <Button
+            sx={{
+              display: "flex",
+              p: 2,
+              my: 1,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <BarChartRounded />
+            <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
+              My Activity
+            </Typography>
+          </Button>
+        </Link>
+        <Link
+          to="/dashboard/playground"
+          style={{ textDecoration: "none", color: "#000" }}
         >
-          <SportsVolleyballRounded />
-          <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
-            Playground
-          </Typography>
-        </Button>
-        <Button
-          sx={{
-            display: "flex",
-            p: 2,
-            my: 1,
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "flex-start",
-          }}
+          <Button
+            sx={{
+              display: "flex",
+              p: 2,
+              my: 1,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <SportsVolleyballRounded />
+            <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
+              Playground
+            </Typography>
+          </Button>
+        </Link>
+        <Link
+          to="/dashboard/search"
+          style={{ textDecoration: "none", color: "#000" }}
         >
-          <SearchRounded />
-          <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
-            Search People
-          </Typography>
-        </Button>
-        <Button
-          sx={{
-            display: "flex",
-            p: 2,
-            my: 1,
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "flex-start",
-          }}
+          <Button
+            sx={{
+              display: "flex",
+              p: 2,
+              my: 1,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <SearchRounded />
+            <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
+              Search People
+            </Typography>
+          </Button>
+        </Link>
+        <Link
+          to="/dashboard/setting"
+          style={{ textDecoration: "none", color: "#000" }}
         >
-          <SettingsRounded />
-          <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
-            Settings
-          </Typography>
-        </Button>
-        <Button
-          sx={{
-            display: "flex",
-            p: 2,
-            my: 1,
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "flex-start",
-          }}
+          <Button
+            sx={{
+              display: "flex",
+              p: 2,
+              my: 1,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <SettingsRounded />
+            <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
+              Settings
+            </Typography>
+          </Button>
+        </Link>
+        <Link
+          to="/dashboard/profile"
+          style={{ textDecoration: "none", color: "#000" }}
         >
-          <AccountCircleRounded />
-          <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
-            Profile
-          </Typography>
-        </Button>
-        <Button
-          sx={{
-            display: "flex",
-            p: 2,
-            my: 1,
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "flex-start",
-          }}
-        >
-          <HomeRounded />
-          <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
-            Home
-          </Typography>
-        </Button>
-        <Button
-          sx={{
-            display: "flex",
-            p: 2,
-            my: 1,
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "flex-start",
-          }}
-        >
-          <LogoutRounded />
-          <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
-            Log Out
-          </Typography>
-        </Button>
+          <Button
+            sx={{
+              display: "flex",
+              p: 2,
+              my: 1,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <AccountCircleRounded />
+            <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
+              Profile
+            </Typography>
+          </Button>
+        </Link>
+        <Link to="/" style={{ textDecoration: "none", color: "#000" }}>
+          <Button
+            sx={{
+              display: "flex",
+              p: 2,
+              my: 1,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <HomeRounded />
+            <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
+              Home
+            </Typography>
+          </Button>
+        </Link>
+        <Link to="/" style={{ textDecoration: "none", color: "#000" }}>
+          <Button
+            sx={{
+              display: "flex",
+              p: 2,
+              my: 1,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <LogoutRounded />
+            <Typography sx={{ marginLeft: "10px", fontSize: "13px" }}>
+              Log Out
+            </Typography>
+          </Button>
+        </Link>
       </div>
     </Container>
   );

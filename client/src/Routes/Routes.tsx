@@ -8,8 +8,13 @@ const AppRoutes = () => {
       element: <Dashboard />,
       children: [
         { path: "feed", element: <p>feed</p> },
+        { path: "network", element: <p>network</p> },
+        { path: "activity", element: <p>activity</p> },
+        { path: "playground", element: <p>playground</p> },
         { path: "search", element: <p>search</p> },
-        // Add dashboard routes here
+        { path: "setting", element: <p>settings</p> },
+        { path: "profile", element: <p>profile</p> },
+        // Replace elements with the components you will be making
       ],
     },
   ]);
