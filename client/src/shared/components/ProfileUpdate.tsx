@@ -3,36 +3,36 @@ import { PrimaryButton, SecondaryButton } from "./Button"
 const ProfileUpdate = () => {
     return (
         <form className="mt-8 grid">
-            <div className="flex">
-                <div className="flex-1">
+            <div className="lg:flex">
+                <div className="lg:flex-1">
                     <input
                         id="firstName"
                         type="text"
                         placeholder="First Name"
-                        className="rounded text-text placeholder:text-text focus:outline-none border border-border focus:border-gray-500 w-5/6 h-12 px-4"
+                        className="rounded text-text placeholder:text-text focus:outline-none border border-border focus:border-gray-500 w-full md:w-5/6 h-12 px-4"
                     />
                     <input
                         id="lastName"
                         type="text"
                         placeholder="Last Name"
-                        className="rounded text-text placeholder:text-text focus:outline-none border border-border focus:border-gray-500 w-5/6 h-12 px-4 my-5"
+                        className="rounded text-text placeholder:text-text focus:outline-none border border-border focus:border-gray-500 w-full md:w-5/6 h-12 px-4 my-5"
                     />
                     <textarea
                         id="bio"
                         placeholder="Bio"
-                        className="rounded text-text placeholder:text-text focus:outline-none border border-border focus:border-gray-500 w-5/6 h-36 px-4 py-2"
+                        className="rounded text-text placeholder:text-text focus:outline-none border border-border focus:border-gray-500 w-full md:w-5/6 h-36 px-4 py-2"
                     />
                     <input
                         id="age"
                         type="number"
                         placeholder="Age"
-                        className="rounded text-text placeholder:text-text focus:outline-none border border-border focus:border-gray-500 w-5/6 h-12 px-4 my-5"
+                        className="rounded text-text placeholder:text-text focus:outline-none border border-border focus:border-gray-500 w-full md:w-5/6 h-12 px-4 my-5"
                     />
                     <div>
                         <label className="text-sm">
                             Hobbies
                             <br />
-                            <div className="w-5/6 grid grid-flow-row-dense grid-cols-3 auto-cols-max">
+                            <div className="w-full md:w-5/6 grid grid-flow-row-dense grid-cols-3 auto-cols-max">
                                 <input
                                     id="age"
                                     type="string"
@@ -50,7 +50,7 @@ const ProfileUpdate = () => {
                         <label className="text-sm">
                             Skills
                             <br />
-                            <div className="w-5/6 grid grid-flow-row-dense grid-cols-3 auto-cols-max">
+                            <div className="w-full md:w-5/6 grid grid-flow-row-dense grid-cols-3 auto-cols-max">
                                 <input
                                     id="age"
                                     type="text"
@@ -64,20 +64,20 @@ const ProfileUpdate = () => {
                         </label>
                     </div>
                 </div>
-                <div className="flex-1">
-                    <div className="flex">
+                <div className="lg:flex-1">
+                    <div className="lg:flex">
                         <img
                             src="/Avatar.png"
                             alt="Avatar"
                             className="rounded-full h-36 w-36"
                         />
                         <div>
-                            <div className="text-right justify-self-end text-text ml-32">
+                            <div className="lg:text-right lg:justify-self-end text-text lg:ml-32">
                                 Choose an avatar for
                                 <br />
                                 your profile
                             </div>
-                            <div className="ml-44 mt-12">
+                            <div className="lg:ml-44 mt-6 lg:mt-12">
                                 <SecondaryButton msg="Choose Avatar" />
                             </div>
                         </div>

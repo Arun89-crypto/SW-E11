@@ -9,7 +9,7 @@ const Welcome = () => {
             <div className="text-lg">
                 Tell us about yourself.
             </div>
-            <div className="ml-40 mr-10">
+            <div className="md:ml-20 lg:ml-40 lg:mr-10">
                 <ProfileUpdate />
             </div>
         </div>

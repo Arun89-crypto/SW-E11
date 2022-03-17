@@ -2,7 +2,7 @@ import React from 'react'
 
 export const PrimaryButton = (props: any) => {
   return (
-    <button className='bg-secondary h-12 rounded px-8 text-white uppercase text-xs'>
+    <button className='bg-secondary h-12 rounded px-6 lg:px-8 text-white uppercase text-xs'>
       {props.msg}
     </button>
   )
