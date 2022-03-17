@@ -20,14 +20,14 @@ const Network = () => {
   );
 };
 
-const FollowingSection = () => {
-  return (
-    <Container
-      sx={{
-        maxWidth: "500px",
-      }}
-    ></Container>
-  );
-};
+// const FollowingSection = () => {
+//   return (
+//     <Container
+//       sx={{
+//         maxWidth: "500px",
+//       }}
+//     ></Container>
+//   );
+// };
 
 export default Network;

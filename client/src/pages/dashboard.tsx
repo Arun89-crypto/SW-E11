@@ -1,4 +1,3 @@
-import { Container } from "@mui/material";
 import Sidebar from "../shared/components/Sidebar";
 import { Outlet } from "react-router-dom";
 
