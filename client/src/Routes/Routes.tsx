@@ -2,6 +2,7 @@ import { useRoutes } from "react-router-dom";
 import Feed from "../shared/components/Feed";
 import Network from "../shared/components/Network";
 import Dashboard from "../pages/dashboard";
+import Activity from "../shared/components/Activity";
 
 const AppRoutes = () => {
   const elements = useRoutes([
@@ -11,7 +12,7 @@ const AppRoutes = () => {
       children: [
         { path: "feed", element: <Feed /> },
         { path: "network", element: <Network /> },
-        { path: "activity", element: <p>activity</p> },
+        { path: "activity", element: <Activity /> },
         { path: "playground", element: <p>playground</p> },
         { path: "search", element: <p>search</p> },
         { path: "setting", element: <p>settings</p> },

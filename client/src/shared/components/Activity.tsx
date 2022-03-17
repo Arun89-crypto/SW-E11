@@ -1,6 +1,15 @@
-import { RefreshRounded } from "@mui/icons-material";
-import { Button, Container, Typography } from "@mui/material";
+import { Container, Typography, Button } from "@mui/material";
+import React from "react";
 import FeedPost from "./FeedPost";
+import { DeleteRounded } from "@mui/icons-material";
+interface feedpostparams {
+  feedpost: {
+    name: string;
+    content: string[];
+    profilepic: string;
+    stars: string;
+  };
+}
 
 const feedpost = {
   name: "Graviana Alexei",
@@ -14,7 +23,7 @@ const feedpost = {
     "https://images.unsplash.com/photo-1598507619174-04d674f7fb95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
 };
 
-const Feed = () => {
+const Activity = () => {
   return (
     <Container
       sx={{
@@ -28,30 +37,26 @@ const Feed = () => {
         position: "relative",
       }}
     >
-      <Container
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Typography variant="h4">Feed</Typography>
-        <Button>
-          <Typography
-            sx={{
-              marginRight: "5px",
-            }}
-          >
-            Refresh feed
-          </Typography>
-          <RefreshRounded />
-        </Button>
-      </Container>
-      <FeedPost feedpost={feedpost} />
-      <FeedPost feedpost={feedpost} />
-      <FeedPost feedpost={feedpost} />
+      <Typography variant="h4">My Activity</Typography>
+      <PostBlock feedpost={feedpost} />
     </Container>
   );
 };
 
-export default Feed;
+const PostBlock: React.FC<feedpostparams> = ({ feedpost }) => {
+  return (
+    <Container>
+      <FeedPost feedpost={feedpost} />
+      <Button
+        sx={{
+          marginTop: "10px",
+        }}
+      >
+        <DeleteRounded />
+        <Typography>Delete post</Typography>
+      </Button>
+    </Container>
+  );
+};
+
+export default Activity;
