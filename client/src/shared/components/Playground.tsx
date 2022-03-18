@@ -8,10 +8,14 @@ import {
 } from "@mui/material";
 import ScoreboardIcon from "@mui/icons-material/Scoreboard";
 import { EmojiPickers } from "./EmojiPickers";
-import React from "react";
+import React, { useState } from "react";
 import MultipleSelectChip from "./MuiSelect";
+import { useSpeechSynthesis } from "react-speech-kit";
 
 export const Playground = () => {
+	const [value, setValue] = useState("");
+	const { speak } = useSpeechSynthesis();
+
 	return (
 		<Container
 			sx={{
@@ -63,7 +67,8 @@ export const Playground = () => {
 							backgroundColor: "#C4C4C4",
 							height: "200px",
 							borderRadius: "10px",
-						}}></Grid>
+						}}
+						onClick={() => speak({ text: 'toothbrush' })}></Grid>
 					<Grid
 						item
 						xs={2}
@@ -110,17 +115,17 @@ export const Playground = () => {
 					<MultipleSelectChip />
 				</Grid>
 				<Button
-				variant='outlined'
-				sx={{
-					width: "200px",
-					color: "#1976D2",
-					fontWeight: 200,
-					borderColor: "#1976D2",
-					my: 3,
-					mx: 1
-				}}>
-				Share your routine
-			</Button>
+					variant='outlined'
+					sx={{
+						width: "200px",
+						color: "#1976D2",
+						fontWeight: 200,
+						borderColor: "#1976D2",
+						my: 3,
+						mx: 1,
+					}}>
+					Share your routine
+				</Button>
 			</Container>
 		</Container>
 	);
