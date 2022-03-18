@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from './pages/home';
 import { Signup } from './pages/signup';
 import Welcome from './pages/welcome';
+import AppRoutes from "./Routes/Routes";
+import Home from "./pages/home";
 
 export default function App() {
   return (
@@ -27,7 +28,7 @@ export default function App() {
           }
         />
       </Routes>
-
+      <AppRoutes />
     </Router>
   );
 }
