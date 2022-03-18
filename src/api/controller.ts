@@ -37,10 +37,10 @@ const handleLogin = async (req: Request, res: Response) => {
   try {
     const dbClient = await getDbClient();
     const userData = await dbClient
-      .db()
-      .collection("users")
-      .findOne({ email: req.body.email });
-    if (userData) {
+    .db()
+    .collection("users")
+    .findOne({ email: req.body.email });
+    if (!userData) {
       throw { code: 404, message: "User does not exist!" };
     }
     if (!(await bcrypt.compare(req.body.password, userData.password)))

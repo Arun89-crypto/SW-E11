@@ -9,7 +9,7 @@ export const updateProfile = async (body: any) => {
             .db()
             .collection("users")
             .findOne({ email: body.email });
-        if (userData) {
+        if (!userData) {
             return { code: 404, message: "User does not exist!" };
         }
         await dbClient

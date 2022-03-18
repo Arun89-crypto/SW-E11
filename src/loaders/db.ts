@@ -4,7 +4,8 @@ let dbClient: MongoClient;
 
 export async function initDbClient(): Promise<MongoClient> {
   try {
-    dbClient = await MongoClient.connect(process.env.DB_URI);
+      // replace with process.env.DB_URI
+    dbClient = await MongoClient.connect("mongodb://127.0.0.1:27017/autism");
     console.log("Connected to Database");
     return dbClient;
   } catch (error) {
