@@ -20,16 +20,21 @@ const MenuProps = {
 };
 
 const names = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
+  'Folded clothes',
+  'Cooked food',
+  'Helped a parent',
+  'Helped a friend',
+  'Took my dog out for a walk',
+  'Had a self care day',
+  'Cleansed my body throughly',
+  'Ate fruits',
+  'Came across something interesting',
+  'Watched a new movie',
+  'Met someone new',
+  'Ate out today 🥳',
+  'Cleaned my cupboard',
+  'Cleaned my house',
+  'Spent time with the people I love'
 ];
 
 function getStyles(name: string, personName: readonly string[], theme: Theme) {
@@ -58,14 +63,14 @@ export default function MultipleSelectChip() {
   return (
     <div>
       <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-chip-label">Chip</InputLabel>
+        <InputLabel id="demo-multiple-chip-label">What did you do today?</InputLabel>
         <Select
           labelId="demo-multiple-chip-label"
           id="demo-multiple-chip"
           multiple
           value={personName}
           onChange={handleChange}
-          input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
+          input={<OutlinedInput id="select-multiple-chip" label="What did you do today?" />}
           renderValue={(selected) => (
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
               {selected.map((value) => (
