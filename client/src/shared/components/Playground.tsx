@@ -4,16 +4,13 @@ import {
 	Grid,
 	Typography,
 	Box,
-	TextField,
 } from "@mui/material";
 import ScoreboardIcon from "@mui/icons-material/Scoreboard";
 import { EmojiPickers } from "./EmojiPickers";
-import React, { useState } from "react";
 import MultipleSelectChip from "./MuiSelect";
 import { useSpeechSynthesis } from "react-speech-kit";
 
 export const Playground = () => {
-	const [value, setValue] = useState("");
 	const { speak } = useSpeechSynthesis();
 
 	return (

@@ -6,6 +6,7 @@ export const EmojiPickers = () => {
 
 	const onEmojiClick = (event: any, emojiObject: any): any => {
 		setChosenEmoji(emojiObject);
+		console.log(chosenEmoji);
 	};
 
 	return (
