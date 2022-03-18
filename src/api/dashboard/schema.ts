@@ -24,4 +24,5 @@ export const profileSchema = yup.object().shape({
   avatar: yup.string().default(() => {
     return `https://avatars.dicebear.com/api/croodles-neutral/${nanoid()}.svg`;
   }),
+
 });
