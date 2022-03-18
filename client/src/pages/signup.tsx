@@ -69,12 +69,14 @@ export const Signup = () => {
 								/>
 								<TextField
 									id='outlined-basic'
+									type="password"
 									label='Password'
 									variant='outlined'
 									required
 								/>
 								<TextField
 									id='outlined-basic'
+									type="password"
 									label='Confirm Password'
 									variant='outlined'
 									required
