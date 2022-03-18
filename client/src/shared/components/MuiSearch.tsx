@@ -1,36 +1,34 @@
 import * as React from "react";
-import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
-import Autocomplete from "@mui/material/Autocomplete";
 import {
 	FormControl,
 	IconButton,
 	InputAdornment,
 	InputLabel,
 	OutlinedInput,
-    Typography,
+	Typography,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 export default function MuiSearch() {
 	return (
-        <>
-            <Typography sx={{my:4, mx:1, fontWeight: '600px'}} variant='h5'>
-            Search for people
-            </Typography>
-            <Stack spacing={2} sx={{ width: 300, my: 2 }}>
-			<FormControl sx={{ m: 1, width: "100ch" }} variant='filled'>
-				<InputLabel htmlFor='outlined-adornment-password' sx={{ px: 4 }}>
-					Search
-				</InputLabel>
-				<OutlinedInput
-					id='outlined-adornment-password'
-					endAdornment={<SearchIcon />}
-					label='Search'
-				/>
-			</FormControl>
-        </Stack>
-        </>
+		<>
+			<Typography sx={{ my: 4, mx: 1, fontWeight: "600px" }} variant='h5'>
+				Search for people
+			</Typography>
+			<Stack spacing={2} sx={{ width: 300, my: 2 }}>
+				<FormControl sx={{ m: 1, width: "100ch" }} variant='filled'>
+					<InputLabel htmlFor='outlined-adornment-password' sx={{ px: 4 }}>
+						Search
+					</InputLabel>
+					<OutlinedInput
+						id='outlined-adornment-password'
+						endAdornment={<SearchIcon />}
+						label='Search'
+					/>
+				</FormControl>
+			</Stack>
+		</>
 	);
 }
 

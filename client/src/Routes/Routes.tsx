@@ -4,6 +4,7 @@ import Network from "../shared/components/Network";
 import Dashboard from "../pages/dashboard";
 import { Playground } from "../shared/components/Playground";
 import { Search } from "../shared/components/Search";
+import { Profile } from "../shared/components/Profile";
 
 const AppRoutes = () => {
   const elements = useRoutes([
@@ -17,7 +18,7 @@ const AppRoutes = () => {
         { path: "playground", element: <Playground/> },
         { path: "search", element: <Search/> },
         { path: "setting", element: <p>settings</p> },
-        { path: "profile", element: <p>profile</p> },
+        { path: "profile", element: <Profile/> },
         // Replace elements with the components you will be making
       ],
     },
