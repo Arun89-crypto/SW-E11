@@ -8,7 +8,6 @@ import {
   LogoutRounded,
   PeopleRounded,
   SearchRounded,
-  SettingsRounded,
   SportsVolleyballRounded,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
@@ -140,7 +139,7 @@ const Sidebar = () => {
             </Typography>
           </Button>
         </Link>
-        <Link
+        {/* <Link
           to="/dashboard/setting"
           style={{ textDecoration: "none", color: "#000" }}
         >
@@ -159,7 +158,7 @@ const Sidebar = () => {
               Settings
             </Typography>
           </Button>
-        </Link>
+        </Link> */}
         <Link
           to="/dashboard/profile"
           style={{ textDecoration: "none", color: "#000" }}
