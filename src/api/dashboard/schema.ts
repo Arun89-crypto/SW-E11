@@ -1,4 +1,5 @@
 import * as yup from "yup";
+import { nanoid } from "nanoid";
 
 export const profileSchema = yup.object().shape({
   email: yup.string().required().email(),
@@ -7,5 +8,8 @@ export const profileSchema = yup.object().shape({
   bio: yup.string().required(),
   age: yup.number().required(),
   hobbies: yup.array().of(yup.string().required()).required(),
-  skills: yup.array().of(yup.string().required()).required()
+  skills: yup.array().of(yup.string().required()).required(),
+  avatar: yup.string().default(() => {
+    return `https://avatars.dicebear.com/api/croodles-neutral/${nanoid()}.svg`;
+  }),
 });
