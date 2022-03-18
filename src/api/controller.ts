@@ -68,8 +68,29 @@ const handleConnections = async (req: Request, res: Response) => {
       .collection("users")
       .findOne({ email: req.body.email });
     if (!userData) throw { code: 404, message: "User does not exist!" };
-
-    res.sendStatus(201);
+    let arr = await dbClient.db().collection("users").find({}).toArray();
+    if (userData.hobbies.length) {
+      arr = await dbClient
+        .db()
+        .collection("users")
+        .find({ skills: { $elemMatch: { $eq: userData.skills[0] } } })
+        .toArray();
+    }
+    if (userData.skills.length) {
+      const skillsa = await dbClient
+        .db()
+        .collection("users")
+        .find({ skills: { $elemMatch: { $eq: userData.skills[0] } } })
+        .toArray();
+      arr = arr.concat(skillsa);
+    }
+    if (arr.length < 2) {
+      const newa = await (
+        await dbClient.db().collection("users").find({})
+      ).toArray();
+      arr = arr.concat(newa);
+    }
+    res.json({ connections: arr.slice(0, 3) });
   } catch (err) {
     console.log(err);
     res
