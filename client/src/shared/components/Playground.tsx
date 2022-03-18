@@ -10,7 +10,6 @@ import ScoreboardIcon from "@mui/icons-material/Scoreboard";
 import { EmojiPickers } from "./EmojiPickers";
 import MultipleSelectChip from "./MuiSelect";
 import { useSpeechSynthesis } from "react-speech-kit";
-import SvgRenderer from "./SvgRenderer";
 import Toilet from "../assets/toilet.jpg";
 import Toothbrush from "../assets/toothbrush.jpg";
 import Towel from "../assets/towel.jpg";
