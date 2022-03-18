@@ -137,6 +137,12 @@ export const Playground = () => {
 						Click on the emoji which resembles your mood
 					</Typography>
 				</Box>
+				{/* <Grid container columnGap={6} sx={{ width: "100vw", mb:3 }}>
+					<TextField
+						label='Pick your mood'
+						disabled
+					/>
+				</Grid> */}
 				<Grid container columnGap={6} sx={{ width: "100vw" }}>
 					<EmojiPickers />
 				</Grid>
