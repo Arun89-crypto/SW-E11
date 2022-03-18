@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response, Router } from "express";
 import { validateRequest } from "../loaders/validator";
-import { signupSchema } from "./schema";
+import { emailSchema, signupSchema } from "./schema";
 import bcrypt from "bcrypt";
 import { getDbClient } from "../loaders/db";
 import * as jwt from "jsonwebtoken";
@@ -60,9 +60,32 @@ const handleLogin = async (req: Request, res: Response) => {
   }
 };
 
+const handleConnections = async (req: Request, res: Response) => {
+  try {
+    const dbClient = await getDbClient();
+    const userData = await dbClient
+      .db()
+      .collection("users")
+      .findOne({ email: req.body.email });
+    if (!userData) throw { code: 404, message: "User does not exist!" };
+
+    res.sendStatus(201);
+  } catch (err) {
+    console.log(err);
+    res
+      .status(err.code || 500)
+      .json({ success: false, message: err.message || "ISR" });
+  }
+};
+
 export default function controller() {
   const router = Router();
   router.post("/signup", validateRequest("body", signupSchema), handleSignUp);
   router.post("/login", validateRequest("body", signupSchema), handleLogin);
+  router.post(
+    "/connections",
+    validateRequest("body", emailSchema),
+    handleConnections
+  );
   return router;
 }

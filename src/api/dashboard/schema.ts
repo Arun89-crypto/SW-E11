@@ -7,8 +7,20 @@ export const profileSchema = yup.object().shape({
   lastName: yup.string().required(),
   bio: yup.string().required(),
   age: yup.number().required(),
-  hobbies: yup.array().of(yup.string().required()).required(),
-  skills: yup.array().of(yup.string().required()).required(),
+  hobbies: yup
+    .array()
+    .of(yup.string().required())
+    .required()
+    .default(() => {
+      return [];
+    }),
+  skills: yup
+    .array()
+    .of(yup.string().required())
+    .required()
+    .default(() => {
+      return [];
+    }),
   avatar: yup.string().default(() => {
     return `https://avatars.dicebear.com/api/croodles-neutral/${nanoid()}.svg`;
   }),
