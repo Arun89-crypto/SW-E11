@@ -16,11 +16,11 @@ export const EmojiPickers = () => {
 		var input = document.getElementById("mood-picker");
 		input!.onkeydown = function (e: any) {
 			var key = e.keyCode || e.charCode;
-			if (key == 8) {
+			if (key === 8) {
 				setChosenEmoji(chosenEmoji?.slice(0, -1));
 			}
 		};
-	}, []);
+	});
 
 	return (
 		<div>
