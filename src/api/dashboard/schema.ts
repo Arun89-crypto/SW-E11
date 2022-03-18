@@ -1,4 +1,5 @@
 import * as yup from "yup";
+import { nanoid } from "nanoid";
 
 export const profileSchema = yup.object().shape({
   email: yup.string().email(),
